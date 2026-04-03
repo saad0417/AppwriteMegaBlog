@@ -21,6 +21,7 @@ function Header() {
   return (
     <header className='py-3 shadow bg-gray-500'>
       <Container>
+        {/* This is the navigation bar. It contains the logo and the navigation items. */}
         <nav className='flex'>
           <div className='mr-4'>
             <Link to='/'>
@@ -34,7 +35,7 @@ function Header() {
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}  // This will navigate to the path specified in the navItems array when the button is clicked.
-                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full cursor-pointer'
+                className='inline-bock px-6 py-2 duration-250 hover:bg-blue-200 rounded-full cursor-pointer'
                 >{item.name}</button>
               </li>
             ) : null

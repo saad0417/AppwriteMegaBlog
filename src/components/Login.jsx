@@ -41,7 +41,7 @@ function Login() {
     }
     
   return (
-    <div className='flex items-center justify-center w-full'>
+    <div className='flex items-center justify-center w-full my-5'>
         <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
                     <span className="inline-block w-full max-w-[100px]">
@@ -85,7 +85,7 @@ function Login() {
                 />
                 <Button
                 type="submit"
-                className="w-full cursor-pointer"
+                className="w-full hover:bg-blue-700 transition-all duration-200"
                 >Sign in</Button>
             </div>
         </form>

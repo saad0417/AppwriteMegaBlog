@@ -111,11 +111,11 @@ export default function PostForm({ post }) {
                 )}
                 <Select
                     options={["active", "inactive"]}
-                    label="Status"
-                    className="mb-4"
+                    label="Status: "
+                    className="mb-20"
                     {...register("status", { required: true })}
                 />
-                <Button type="submit" bgColor={post ? "bg-green-500" : undefined} className="w-full">
+                <Button type="submit" bgColor={post ? "bg-green-500 hover:bg-green-600 transition-all duration-200" : undefined} className="w-full hover:bg-blue-700 transition-all duration-200">
                     {post ? "Update" : "Submit"}
                 </Button>
             </div>
