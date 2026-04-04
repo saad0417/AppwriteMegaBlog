@@ -14,6 +14,8 @@ function App() {
   // it checks the user login status when the app start if the user is logged in then it will set the user data in the redux store(login) and if the user is not logged in then it will set the user data to null in the redux store(logout).
   // basically it reserves the state of the user login status if user was previously logged in then it will keep the user logged in and if user was previously logged out then it will keep the user logged out when the app refreshes.
   useEffect(() => {
+    console.log("loading statrted....");
+    
     authService.getCurrentUser()
     .then((userData) => {
       if (userData) 
@@ -31,6 +33,7 @@ function App() {
     })
     .finally(() => { // this will run after the promise is resolved or rejected(it always runs).
                      // as loading was true before fetching the user data, now we will set it to false after fetching the user data whether it is successful or not.
+      console.log("loading ended....");
       setLoading(false)  
     })
 
