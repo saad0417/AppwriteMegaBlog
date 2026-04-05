@@ -1,7 +1,7 @@
 import conf from "../conf/conf";
 import { Client, Account, ID } from "appwrite";
 
-export class AuthService {
+export class AuthService { 
     client = new Client();
     account; // we have to declare variable here because first of all we haven't created client(.methods) and we want this to be created only when they are called so...
 
